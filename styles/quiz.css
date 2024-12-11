@@ -1,0 +1,46 @@
+.question-container {
+    display: none;
+}
+
+.question-container.active {
+    display: block;
+}
+
+.options {
+    margin: 10px 0;
+}
+
+.option {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+#score-display {
+    display: none;
+}
+
+#quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.option {
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.option:hover {
+    background-color: #e0e0e0;
+}
