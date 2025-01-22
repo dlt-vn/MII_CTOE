@@ -5,7 +5,7 @@ const easyQuestions = [
       question: "Onde está localizado o CTOE?",
       options: ["Lisboa", "Porto", "Lamego", "Coimbra"],
       correctAnswer: "Lamego",
-      image: "../assets/imgs/CTOE_Lamego.png"
+      image: "../assets/imgs/1.png"
     },
     {
       question: "O que significa a sigla CTOE?",
@@ -15,7 +15,8 @@ const easyQuestions = [
         "Comando Técnico de Operações Especiais",
         "Corpo de Tropa de Operações Estratégicas"
       ],
-      correctAnswer: "Centro de Tropas de Operações Especiais"
+      correctAnswer: "Centro de Tropas de Operações Especiais",
+      image: "../assets/imgs/2.png"
     },
     {
       question: "Qual a cor característica do boina usada pelos militares do CTOE?",
@@ -25,17 +26,20 @@ const easyQuestions = [
         "Azul",
         "Verde Claro"
       ],
-      correctAnswer: "Verde Claro"
+      correctAnswer: "Verde Claro",
+      image: "../assets/imgs/3.png"
     },
     {
       question: "Os membros do CTOE são também conhecidos por que nome?",
       options: ["Rangers", "Comandos", "Forças Especiais", "Operacionais"],
-      correctAnswer: "Rangers"
+      correctAnswer: "Rangers",
+      image: "../assets/imgs/4.png"
     },
     {
       question: "O CTOE é uma unidade pertencente a que ramo das Forças Armadas Portuguesas?",
       options: ["Marinha", "Exército", "Força Aérea", "GNR"],
-      correctAnswer: "Exército"
+      correctAnswer: "Exército",
+      image: "../assets/imgs/5.png"
     }
   ];
 
@@ -48,7 +52,8 @@ const mediumQuestions = [
         "Curso de Táticas Especiais",
         "Curso de Ranger"
       ],
-      correctAnswer: "Curso de Ranger"
+      correctAnswer: "Curso de Ranger",
+      image: "../assets/imgs/6.png"
     },
     {
       question: "Qual é a principal missão do CTOE?",
@@ -58,12 +63,14 @@ const mediumQuestions = [
         "Coordenar logística militar",
         "Treinar recrutas para missões de paz"
       ],
-      correctAnswer: "Realizar operações especiais em condições extremas"
+      correctAnswer: "Realizar operações especiais em condições extremas",
+      image: "../assets/imgs/7.png"
     },
     {
       question: "Em que ano foi criado o CTOE?",
       options: ["1960", "1955", "1974", "1980"],
-      correctAnswer: "1960"
+      correctAnswer: "1960",
+      image: "../assets/imgs/8.png"
     },
     {
       question: "Que tipo de operações são frequentemente associadas ao CTOE?",
@@ -73,12 +80,14 @@ const mediumQuestions = [
         "Operações navais de patrulha",
         "Operações de defesa cibernética"
       ],
-      correctAnswer: "Operações de resgate de reféns"
+      correctAnswer: "Operações de resgate de reféns",
+      image: "../assets/imgs/9.png"
     },
     {
       question: "Quantos meses dura o Curso de Ranger?",
       options: ["3 meses", "5 meses", "6 meses", "9 meses"],
-      correctAnswer: "5 meses"
+      correctAnswer: "5 meses",
+      image: "../assets/imgs/10.png"
     }
   ];
 
@@ -91,17 +100,20 @@ const hardQuestions = [
         "Que os muitos por ser poucos não temamos",
         "Treinados para vencer"
       ],
-      correctAnswer: "Que os muitos por ser poucos não temamos"
+      correctAnswer: "Que os muitos por ser poucos não temamos",
+      image: "../assets/imgs/11.png"
     },
     {
       question: "Que tipo de ambiente não é uma especialidade para treino do CTOE?",
       options: ["Montanhoso", "Urbano", "Desértico", "Florestal"],
-      correctAnswer: "Desértico"
+      correctAnswer: "Desértico",
+      image: "../assets/imgs/12.png"
     },
     {
       question: "O CTOE participa frequentemente em missões de cooperação internacional. Qual destas organizações está mais associada a estas missões?",
       options: ["NATO (OTAN)", "União Europeia", "ONU", "Organização dos Estados Ibero-Americanos"],
-      correctAnswer: "NATO (OTAN)"
+      correctAnswer: "NATO (OTAN)",
+      image: "../assets/imgs/13.png"
     },
     {
       question: "Qual é o símbolo do CTOE?",
@@ -111,7 +123,8 @@ const hardQuestions = [
         "Uma águia com asas abertas",
         "Um leopardo em posição de ataque"
       ],
-      correctAnswer: "Um leopardo em posição de ataque"
+      correctAnswer: "Um leopardo em posição de ataque",
+      image: "../assets/imgs/14.png"
     },
     {
       question: "Durante o treino no Curso de Ranger, qual destas situações faz parte do programa?",
@@ -121,7 +134,8 @@ const hardQuestions = [
         "Missões em águas internacionais",
         "Operações de helicóptero noturnas"
       ],
-      correctAnswer: "Prova de Aptidão Física e Psicológica"
+      correctAnswer: "Prova de Aptidão Física e Psicológica",
+      image: "../assets/imgs/15.png"
     }
   ];
 
@@ -134,12 +148,14 @@ const veryHardQuestions = [
         "Grupo de Operações Especiais",
         "Unidade de Reconhecimento Estratégico"
       ],
-      correctAnswer: "Batalhão de Caçadores Especiais"
+      correctAnswer: "Batalhão de Caçadores Especiais",
+      image: "../assets/imgs/16.png"
     },
     {
       question: "Quantos quilómetros, em média, percorrem os candidatos ao Curso de Ranger durante o treino físico de resistência?",
       options: ["50 km", "70 km", "90 km", "110 km"],
-      correctAnswer: "110 km"
+      correctAnswer: "110 km",
+      image: "../assets/imgs/17.png"
     },
     {
       question: "Que nome é dado ao exercício final do Curso de Ranger, que testa todas as competências aprendidas?",
@@ -149,12 +165,14 @@ const veryHardQuestions = [
         "Sobrevivência Extrema",
         "Exercício Camaleão"
       ],
-      correctAnswer: "Exercício Camaleão"
+      correctAnswer: "Exercício Camaleão",
+      image: "../assets/imgs/18.png"
     },
     {
       question: "Qual destes países já recebeu colaboração direta do CTOE em operações militares?",
       options: ["Afeganistão", "Moçambique", "Timor-Leste", "Todos os anteriores"],
-      correctAnswer: "Todos os anteriores"
+      correctAnswer: "Todos os anteriores",
+      image: "../assets/imgs/19.png"
     },
     {
       question: "Durante a cerimónia de entrega do brevet de Ranger, o que é tradicionalmente usado para simbolizar a conclusão do curso?",
@@ -164,7 +182,8 @@ const veryHardQuestions = [
         "Uma boina verde clara",
         "Uma insígnia com o símbolo do leopardo"
       ],
-      correctAnswer: "Um bastão de madeira com um leopardo gravado"
+      correctAnswer: "Um bastão de madeira com um leopardo gravado",
+      image: "../assets/imgs/20.png"
     }
   ];
 
