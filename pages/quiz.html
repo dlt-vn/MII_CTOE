@@ -8,7 +8,12 @@
 </head>
 <body>
     <header class="quiz-header">
-        <h1>QUIZ - Museu CTOE</h1>
+        <div class="header-content">
+            <h1>Quiz CTOE</h1>
+            <div id="progress-bar-container">
+              <div id="progress-bar"></div>
+            </div>
+          </div>
     </header>
 
     <main class="quiz-container">
@@ -29,9 +34,13 @@
             <button id="start-btn">Reiniciar Quiz</button>
         </div>
     </main>
+    
 
     <footer class="quiz-footer">
         <button class="footer-btn" id="home-btn">Home</button>
+        <div id="mascot-container">
+            <img id="mascot" src="../assets/imgs/mascot.png" alt="Mascote neutro">
+          </div>
         <button class="footer-btn" id="hint-btn">Dica (3x)</button>
     </footer>
 
