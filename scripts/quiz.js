@@ -1,36 +1,172 @@
 const easyQuestions = [
-    { question: "What is 2 + 2?", options: ["3", "4", "5", "6"], correctAnswer: "4" },
-    { question: "Which is a primary color?", options: ["Green", "Purple", "Orange", "Blue"], correctAnswer: "Blue" },
-    { question: "What is the capital of France?", options: ["London", "Berlin", "Paris", "Madrid"], correctAnswer: "Paris" },
-    { question: "What is 5 + 3?", options: ["7", "8", "9", "10"], correctAnswer: "8" },
-    { question: "Which planet is known as the Red Planet?", options: ["Earth", "Mars", "Venus", "Jupiter"], correctAnswer: "Mars" }
-];
+    {
+      question: "Onde está localizado o CTOE?",
+      options: ["Lisboa", "Porto", "Lamego", "Coimbra"],
+      correctAnswer: "Lamego",
+      image: "../assets/imgs/CTOE_Lamego.png"
+    },
+    {
+      question: "O que significa a sigla CTOE?",
+      options: [
+        "Centro de Treino de Operações Especiais",
+        "Centro de Tropas de Operações Especiais",
+        "Comando Técnico de Operações Especiais",
+        "Corpo de Tropa de Operações Estratégicas"
+      ],
+      correctAnswer: "Centro de Tropas de Operações Especiais"
+    },
+    {
+      question: "Qual a cor característica do boina usada pelos militares do CTOE?",
+      options: [
+        "Verde Escuro – Tropas Páraquedistas",
+        "Vermelho – Comandos",
+        "Azul – Fuzileiros Navais",
+        "Verde Claro – Rangers / CTOE"
+      ],
+      correctAnswer: "Verde Claro – Rangers / CTOE"
+    },
+    {
+      question: "Os membros do CTOE são também conhecidos por que nome?",
+      options: ["Rangers", "Comandos", "Forças Especiais", "Operacionais"],
+      correctAnswer: "Rangers"
+    },
+    {
+      question: "O CTOE é uma unidade pertencente a que ramo das Forças Armadas Portuguesas?",
+      options: ["Marinha", "Exército", "Força Aérea", "GNR"],
+      correctAnswer: "Exército"
+    }
+  ];
 
 const mediumQuestions = [
-    { question: "What is the largest ocean?", options: ["Atlantic", "Pacific", "Indian", "Arctic"], correctAnswer: "Pacific" },
-    { question: "Which is not a mammal?", options: ["Whale", "Dolphin", "Shark", "Bat"], correctAnswer: "Shark" },
-    { question: "What is the square root of 16?", options: ["2", "3", "4", "5"], correctAnswer: "4" },
-    { question: "Which country is in South America?", options: ["Canada", "Brazil", "Spain", "Japan"], correctAnswer: "Brazil" },
-    { question: "What is the capital of Italy?", options: ["Rome", "Paris", "Berlin", "Lisbon"], correctAnswer: "Rome" }
-];
+    {
+      question: "Qual é o nome do curso que os militares têm de completar para se tornarem membros do CTOE?",
+      options: [
+        "Curso de Resistência e Sobrevivência",
+        "Curso de Combate Urbano",
+        "Curso de Táticas Especiais",
+        "Curso de Ranger"
+      ],
+      correctAnswer: "Curso de Ranger"
+    },
+    {
+      question: "Qual é a principal missão do CTOE?",
+      options: [
+        "Defender as fronteiras portuguesas",
+        "Realizar operações especiais em condições extremas",
+        "Coordenar logística militar",
+        "Treinar recrutas para missões de paz"
+      ],
+      correctAnswer: "Realizar operações especiais em condições extremas"
+    },
+    {
+      question: "Em que ano foi criado o CTOE?",
+      options: ["1960", "1955", "1974", "1980"],
+      correctAnswer: "1960"
+    },
+    {
+      question: "Que tipo de operações são frequentemente associadas ao CTOE?",
+      options: [
+        "Operações médicas de emergência",
+        "Operações de resgate de reféns",
+        "Operações navais de patrulha",
+        "Operações de defesa cibernética"
+      ],
+      correctAnswer: "Operações de resgate de reféns"
+    },
+    {
+      question: "Quantos meses dura o Curso de Ranger?",
+      options: ["3 meses", "5 meses", "6 meses", "9 meses"],
+      correctAnswer: "5 meses"
+    }
+  ];
 
 const hardQuestions = [
-    { question: "What is 12 x 12?", options: ["124", "144", "154", "164"], correctAnswer: "144" },
-    { question: "Who painted the Mona Lisa?", options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"], correctAnswer: "Leonardo da Vinci" },
-    { question: "What is the chemical symbol for gold?", options: ["Au", "Ag", "Fe", "Go"], correctAnswer: "Au" },
-    { question: "What is the speed of light?", options: ["299,792 km/s", "300,000 km/s", "150,000 km/s", "250,000 km/s"], correctAnswer: "299,792 km/s" },
-    { question: "What is the Pythagorean theorem?", options: ["a^2 + b^2 = c^2", "E = mc^2", "F = ma", "V = IR"], correctAnswer: "a^2 + b^2 = c^2" }
-];
+    {
+      question: "Qual é o lema oficial do CTOE?",
+      options: [
+        "Força e Honra",
+        "Audaces Fortuna Juvat",
+        "Que os muitos por ser poucos não temamos",
+        "Treinados para vencer"
+      ],
+      correctAnswer: "Que os muitos por ser poucos não temamos"
+    },
+    {
+      question: "Que tipo de ambiente não é uma especialidade para treino do CTOE?",
+      options: ["Montanhoso", "Urbano", "Desértico", "Florestal"],
+      correctAnswer: "Desértico"
+    },
+    {
+      question: "O CTOE participa frequentemente em missões de cooperação internacional. Qual destas organizações está mais associada a estas missões?",
+      options: ["NATO (OTAN)", "União Europeia", "ONU", "Organização dos Estados Ibero-Americanos"],
+      correctAnswer: "NATO (OTAN)"
+    },
+    {
+      question: "Qual é o símbolo do CTOE?",
+      options: [
+        "Um leão com uma espada",
+        "Uma cobra enrolada numa espada",
+        "Uma águia com asas abertas",
+        "Um leopardo em posição de ataque"
+      ],
+      correctAnswer: "Um leopardo em posição de ataque"
+    },
+    {
+      question: "Durante o treino no Curso de Ranger, qual destas situações faz parte do programa?",
+      options: [
+        "Saltos de paraquedas",
+        "Prova de Aptidão Física e Psicológica",
+        "Missões em águas internacionais",
+        "Operações de helicóptero noturnas"
+      ],
+      correctAnswer: "Prova de Aptidão Física e Psicológica"
+    }
+  ];
 
 const veryHardQuestions = [
-    { question: "What is the smallest country in the world?", options: ["Vatican City", "Monaco", "San Marino", "Liechtenstein"], correctAnswer: "Vatican City" },
-    { question: "What is the heaviest naturally occurring element?", options: ["Uranium", "Osmium", "Plutonium", "Gold"], correctAnswer: "Uranium" },
-    { question: "What is the 10th digit of pi?", options: ["3", "5", "9", "7"], correctAnswer: "5" },
-    { question: "Which year was the Declaration of Independence signed?", options: ["1775", "1776", "1781", "1783"], correctAnswer: "1776" },
-    { question: "What is Schrödinger's Cat?", options: ["A paradox", "A formula", "A law of motion", "A chemical compound"], correctAnswer: "A paradox" }
-];
+    {
+      question: "Qual é o nome da unidade que precedeu a criação do CTOE em Lamego?",
+      options: [
+        "Centro de Formação de Comandos",
+        "Batalhão de Caçadores Especiais",
+        "Grupo de Operações Especiais",
+        "Unidade de Reconhecimento Estratégico"
+      ],
+      correctAnswer: "Batalhão de Caçadores Especiais"
+    },
+    {
+      question: "Quantos quilómetros, em média, percorrem os candidatos ao Curso de Ranger durante o treino físico de resistência?",
+      options: ["50 km", "70 km", "90 km", "110 km"],
+      correctAnswer: "110 km"
+    },
+    {
+      question: "Que nome é dado ao exercício final do Curso de Ranger, que testa todas as competências aprendidas?",
+      options: [
+        "Missão Fantasma",
+        "Operação Última Prova",
+        "Sobrevivência Extrema",
+        "Exercício Camaleão"
+      ],
+      correctAnswer: "Exercício Camaleão"
+    },
+    {
+      question: "Qual destes países já recebeu colaboração direta do CTOE em operações militares?",
+      options: ["Afeganistão", "Moçambique", "Timor-Leste", "Todos os anteriores"],
+      correctAnswer: "Todos os anteriores"
+    },
+    {
+      question: "Durante a cerimónia de entrega do brevet de Ranger, o que é tradicionalmente usado para simbolizar a conclusão do curso?",
+      options: [
+        "Uma moeda comemorativa",
+        "Um bastão de madeira com um leopardo gravado",
+        "Uma boina verde clara",
+        "Uma insígnia com o símbolo do leopardo"
+      ],
+      correctAnswer: "Um bastão de madeira com um leopardo gravado"
+    }
+  ];
 
-let questions = [
+  let questions = [
     ...shuffleArray(easyQuestions),
     ...shuffleArray(mediumQuestions),
     ...shuffleArray(hardQuestions),
@@ -39,9 +175,9 @@ let questions = [
 
 let currentQuestion = 0;
 let score = 0;
-let hints = 3; 
-const sectorSize = 5; 
-let hintUsedOnCurrentQuestion = false; 
+let hints = 3;
+const sectorSize = 5;
+let hintUsedOnCurrentQuestion = false;
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -60,6 +196,7 @@ function displayQuestion() {
     const questionData = questions[currentQuestion];
     const questionDisplay = document.getElementById('quiz-question');
     const optionsDisplay = document.querySelector('.quiz-options');
+    const imageContainer = document.getElementById('quiz-image'); 
 
     questionDisplay.textContent = `Q${currentQuestion + 1}: ${questionData.question}`;
 
@@ -70,6 +207,12 @@ function displayQuestion() {
             </button>
         `)
         .join('');
+
+    if (questionData.image) {
+        imageContainer.innerHTML = `<img src="${questionData.image}" alt="Question Image" style="max-width: 100%; height: auto; border-radius: 10px;">`;
+    } else {
+        imageContainer.innerHTML = `<p>Imagem<br>(Caso Haja)</p>`;
+    }
 
     document.querySelectorAll('.quiz-option').forEach(option => {
         option.addEventListener('click', () => checkAnswer(option.textContent.trim().slice(2)));
@@ -97,11 +240,11 @@ function showFinalScore() {
     const scoreDisplay = document.getElementById('score-display');
     const scoreElement = document.getElementById('score');
 
-    questionDisplay.textContent = "Quiz Complete!";
+    questionDisplay.textContent = "Quiz Completo!";
     optionsDisplay.innerHTML = "";
 
     scoreDisplay.style.display = "block";
-    scoreElement.textContent = `${score} out of ${questions.length}`;
+    scoreElement.textContent = `${score} de ${questions.length}`;
 }
 
 function useHint() {
@@ -130,7 +273,6 @@ function useHint() {
 function updateHintButton() {
     const hintButton = document.getElementById('hint-btn');
     hintButton.textContent = `Hint (${hints})`;
-
     hintButton.disabled = hints <= 0 || hintUsedOnCurrentQuestion;
 }
 
@@ -142,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('start-btn').addEventListener('click', () => {
         currentQuestion = 0;
         score = 0;
-        hints = 3; 
+        hints = 3;
         document.getElementById('score-display').style.display = 'none';
         displayQuestion();
     });
