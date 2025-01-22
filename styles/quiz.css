@@ -149,10 +149,3 @@ h1, p {
 .footer-btn:hover {
     background-color: #10BB10;
 }
-
-#mascot {
-    max-width: 150px;
-    max-height: 70px;
-    object-fit: contain;
-    transition: transform 0.3s ease-in-out;
-  }
