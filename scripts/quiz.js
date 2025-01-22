@@ -1,3 +1,5 @@
+let experienceLevel = 0; 
+
 const easyQuestions = [
     {
       question: "Onde está localizado o CTOE?",
@@ -18,12 +20,12 @@ const easyQuestions = [
     {
       question: "Qual a cor característica do boina usada pelos militares do CTOE?",
       options: [
-        "Verde Escuro – Tropas Páraquedistas",
-        "Vermelho – Comandos",
-        "Azul – Fuzileiros Navais",
-        "Verde Claro – Rangers / CTOE"
+        "Verde Escuro",
+        "Vermelho",
+        "Azul",
+        "Verde Claro"
       ],
-      correctAnswer: "Verde Claro – Rangers / CTOE"
+      correctAnswer: "Verde Claro"
     },
     {
       question: "Os membros do CTOE são também conhecidos por que nome?",
@@ -290,6 +292,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('home-btn').addEventListener('click', () => {
-        window.location.reload();
-    });
+      const confirmRedirect = confirm('Você realmente deseja voltar para a página inicial? Todo o progresso será perdido.');
+      if (confirmRedirect) {
+          window.location.href = '../index.html';
+      }
+  });
 });
