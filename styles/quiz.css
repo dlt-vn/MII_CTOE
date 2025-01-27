@@ -10,7 +10,7 @@ h1, p {
 }
 
 .quiz-header {
-    background-image: url('../assets/imgs/Barra_Fundo.png');
+    background-image: url('assets/imgs/Barra_Fundo.png');
     max-width: 400px;
     margin: 0px auto 40px auto;
     color: white;
