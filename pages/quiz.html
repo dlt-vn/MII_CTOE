@@ -5,32 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz - Museu CTOE</title>
-    <link rel="stylesheet" href="styles/quiz.css">
+    <!-- Base href para GitHub Pages (substitua 'repository-name' pelo nome do seu repositório) -->
+    <base href="/repository-name/">
+    <link rel="stylesheet" href="./styles/quiz.css">
 </head>
 
 <body>
+    <!-- Header com barra de progresso -->
     <header class="quiz-header">
         <div class="header-content">
             <h1>Quiz</h1>
-            <img id="header-image" src="assets/imgs/insignia1.png" alt="Insignia" style="width: 50px; height: 50px;">
+            <img id="header-image" src="./assets/imgs/insignia1.png" alt="Insignia" style="width: 50px; height: 50px;">
             <div id="progress-bar-container">
                 <div id="progress-bar"></div>
             </div>
         </div>
     </header>
 
+    <!-- Main Content -->
     <main class="quiz-container">
+        <!-- Área para a imagem da pergunta -->
         <div class="quiz-image" id="quiz-image">
             <p>Imagem<br>(Caso Haja)</p>
         </div>
 
+        <!-- Área para a pergunta -->
         <div class="quiz-question" id="quiz-question">
             Pergunta
         </div>
 
-        <div class="quiz-options" id="quiz-options">
-        </div>
+        <!-- Opções de resposta -->
+        <div class="quiz-options" id="quiz-options"></div>
 
+        <!-- Exibição de pontuação final -->
         <div id="score-display" style="display: none;">
             <h2>Quiz Completo!</h2>
             <p>Sua pontuação: <span id="score"></span></p>
@@ -38,25 +45,27 @@
         </div>
     </main>
 
-
+    <!-- Footer com botões -->
     <footer class="quiz-footer">
         <button class="footer-btn" id="home-btn">Home</button>
-        <button class="footer-btn" id="map-btn"><img src="assets/imgs/Mapa_Mira.png" alt="Mapa"
-                style="width: 40px; height: 40px; vertical-align: middle;">
+        <button class="footer-btn" id="map-btn">
+            <img src="./assets/imgs/Mapa_Mira.png" alt="Mapa" style="width: 40px; height: 40px; vertical-align: middle;">
         </button>
         <button class="footer-btn" id="hint-btn" onclick="useHint()">Dicas</button>
     </footer>
 
+    <!-- Modal do mapa interativo -->
     <div id="overlay" style="display: none;"></div>
     <div id="map-container"
         style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 20; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
         <button id="close-map"
             style="position: absolute; top: 10px; right: 10px; background: red; border: none; color: white; font-size: 24px; cursor: pointer; padding: 5px 10px; border-radius: 50%;">&times;</button>
-        <img id="map-image" src="assets/imgs/map1.png" alt="Mapa Interativo"
+        <img id="map-image" src="./assets/imgs/map1.png" alt="Mapa Interativo"
             style="width: 100%; height: auto; border-radius: 10px;">
     </div>
 
-    <script src="scripts/quiz.js"></script>
+    <!-- Inclusão do script -->
+    <script src="./scripts/quiz.js"></script>
 </body>
 
 </html>
