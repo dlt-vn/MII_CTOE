@@ -1,37 +1,187 @@
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            text-align: center;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .start-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #107710;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .start-btn:hover {
-            background-color: #10BB10;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../assets/imgs/background.JPG');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    background-color: #1A3328;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #FFC857;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.play-button,
+.circle-button {
+    border: 4px solid #FFC857;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #FFC857;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.play-button {
+    width: 200px;
+    height: 200px;
+}
+
+.circle-button {
+    width: 100px;
+    height: 70px;
+    margin-top: 50px;
+}
+
+.play-button:hover,
+.circle-button:hover {
+    transform: scale(1.1);
+    background-color: #FFC857;
+    color: #1A3328;
+}
+
+.circle-container {
+    display: flex;
+    gap: 30px;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+#about-paragraph {
+    color: #fff;
+    text-align: center;
+    margin: 0px 10%;
+}
+
+.start-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #107710;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.start-btn:hover {
+    background-color: #10BB10;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#intro-video {
+    width: 100%;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+/* Botão de Pular */
+#skip-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 101;
+    transition: background 0.3s ease;
+}
+
+#skip-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}

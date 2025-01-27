@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz - Museu CTOE</title>
     <link rel="stylesheet" href="../styles/quiz.css">
 </head>
+
 <body>
     <header class="quiz-header">
         <div class="header-content">
-            <h1>Quiz CTOE</h1>
+            <h1>Quiz</h1>
+            <img id="header-image" src="../assets/imgs/insignia1.png" alt="Insignia" style="width: 50px; height: 50px;">
             <div id="progress-bar-container">
-              <div id="progress-bar"></div>
+                <div id="progress-bar"></div>
             </div>
-          </div>
+        </div>
     </header>
 
     <main class="quiz-container">
@@ -25,7 +28,7 @@
             Pergunta
         </div>
 
-        <div class="quiz-options" id="quiz-options">    
+        <div class="quiz-options" id="quiz-options">
         </div>
 
         <div id="score-display" style="display: none;">
@@ -34,16 +37,26 @@
             <button id="start-btn">Reiniciar Quiz</button>
         </div>
     </main>
-    
+
 
     <footer class="quiz-footer">
         <button class="footer-btn" id="home-btn">Home</button>
-        <div id="mascot-container">
-            <img id="mascot" src="../assets/imgs/mascot.png" alt="Mascote neutro">
-          </div>
-        <button class="footer-btn" id="hint-btn">Dica (3x)</button>
+        <button class="footer-btn" id="map-btn"><img src="../assets/imgs/Mapa_Mira.png" alt="Mapa"
+                style="width: 40px; height: 40px; vertical-align: middle;">
+        </button>
+        <button class="footer-btn" id="hint-btn" onclick="useHint()">Dicas</button>
     </footer>
+
+    <div id="overlay" style="display: none;"></div>
+    <div id="map-container"
+        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 20; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+        <button id="close-map"
+            style="position: absolute; top: 10px; right: 10px; background: red; border: none; color: white; font-size: 24px; cursor: pointer; padding: 5px 10px; border-radius: 50%;">&times;</button>
+        <img id="map-image" src="../assets/imgs/map1.png" alt="Mapa Interativo"
+            style="width: 100%; height: auto; border-radius: 10px;">
+    </div>
 
     <script src="../scripts/quiz.js"></script>
 </body>
+
 </html>

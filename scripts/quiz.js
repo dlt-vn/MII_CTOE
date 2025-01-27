@@ -1,6 +1,6 @@
 let experienceLevel = 0;
 
-const easyQuestions = [
+const sectorOneQuestions = [
   {
     question: "Onde está localizado o CTOE?",
     options: ["Lisboa", "Porto", "Lamego", "Coimbra"],
@@ -27,8 +27,22 @@ const easyQuestions = [
       "Azul",
       "Verde Claro"
     ],
-    correctAnswer: "Verde Claro",
+    correctAnswer: "Verde Escuro",
     image: "../assets/imgs/3.png"
+  }
+];
+
+const sectorTwoQuestions = [
+  {
+    question: "Qual é o nome do curso que os militares têm de completar para se tornarem membros do CTOE?",
+    options: [
+      "Curso de Resistência e Sobrevivência",
+      "Curso de Combate Urbano",
+      "Curso de Táticas Especiais",
+      "Curso de Ranger"
+    ],
+    correctAnswer: "Curso de Ranger",
+    image: "../assets/imgs/6.png"
   },
   {
     question: "Os membros do CTOE são também conhecidos por que nome?",
@@ -42,57 +56,33 @@ const easyQuestions = [
     correctAnswer: "Exército",
     image: "../assets/imgs/5.png"
   }
+]
+const sectorThreeQuestions = [{
+  question: "Em que ano foi criado o CTOE?",
+  options: ["1960", "1955", "1974", "1980"],
+  correctAnswer: "1960",
+  image: "../assets/imgs/8.png"
+},
+{
+  question: "Que tipo de operações são frequentemente associadas ao CTOE?",
+  options: [
+    "Operações médicas de emergência",
+    "Operações de resgate de reféns",
+    "Operações navais de patrulha",
+    "Operações de defesa cibernética"
+  ],
+  correctAnswer: "Operações de resgate de reféns",
+  image: "../assets/imgs/9.png"
+},
+{
+  question: "Quantos meses dura o Curso de Ranger?",
+  options: ["3 meses", "5 meses", "6 meses", "9 meses"],
+  correctAnswer: "5 meses",
+  image: "../assets/imgs/10.png"
+}
 ];
 
-const mediumQuestions = [
-  {
-    question: "Qual é o nome do curso que os militares têm de completar para se tornarem membros do CTOE?",
-    options: [
-      "Curso de Resistência e Sobrevivência",
-      "Curso de Combate Urbano",
-      "Curso de Táticas Especiais",
-      "Curso de Ranger"
-    ],
-    correctAnswer: "Curso de Ranger",
-    image: "../assets/imgs/6.png"
-  },
-  {
-    question: "Qual é a principal missão do CTOE?",
-    options: [
-      "Defender as fronteiras portuguesas",
-      "Realizar operações especiais em condições extremas",
-      "Coordenar logística militar",
-      "Treinar recrutas para missões de paz"
-    ],
-    correctAnswer: "Realizar operações especiais em condições extremas",
-    image: "../assets/imgs/7.png"
-  },
-  {
-    question: "Em que ano foi criado o CTOE?",
-    options: ["1960", "1955", "1974", "1980"],
-    correctAnswer: "1960",
-    image: "../assets/imgs/8.png"
-  },
-  {
-    question: "Que tipo de operações são frequentemente associadas ao CTOE?",
-    options: [
-      "Operações médicas de emergência",
-      "Operações de resgate de reféns",
-      "Operações navais de patrulha",
-      "Operações de defesa cibernética"
-    ],
-    correctAnswer: "Operações de resgate de reféns",
-    image: "../assets/imgs/9.png"
-  },
-  {
-    question: "Quantos meses dura o Curso de Ranger?",
-    options: ["3 meses", "5 meses", "6 meses", "9 meses"],
-    correctAnswer: "5 meses",
-    image: "../assets/imgs/10.png"
-  }
-];
-
-const hardQuestions = [
+const sectorFourQuestions = [
   {
     question: "Qual é o lema oficial do CTOE?",
     options: [
@@ -110,6 +100,19 @@ const hardQuestions = [
     correctAnswer: "Desértico",
     image: "../assets/imgs/12.png"
   },
+  {
+    question: "Qual é a principal missão do CTOE?",
+    options: [
+      "Defender as fronteiras portuguesas",
+      "Realizar operações especiais em condições extremas",
+      "Coordenar logística militar",
+      "Treinar recrutas para missões de paz"
+    ],
+    correctAnswer: "Realizar operações especiais em condições extremas",
+    image: "../assets/imgs/7.png"
+  }
+]
+const sectorFiveQuestions = [
   {
     question: "O CTOE participa frequentemente em missões de cooperação internacional. Qual destas organizações está mais associada a estas missões?",
     options: ["NATO (OTAN)", "União Europeia", "ONU", "Organização dos Estados Ibero-Americanos"],
@@ -140,35 +143,13 @@ const hardQuestions = [
   }
 ];
 
-const veryHardQuestions = [
-  {
-    question: "Qual é o nome da unidade que precedeu a criação do CTOE em Lamego?",
-    options: [
-      "Centro de Formação de Comandos",
-      "Batalhão de Caçadores Especiais",
-      "Grupo de Operações Especiais",
-      "Unidade de Reconhecimento Estratégico"
-    ],
-    correctAnswer: "Batalhão de Caçadores Especiais",
-    image: "../assets/imgs/16.png"
-  },
+const sectorSixQuestions = [ // REMOVER PERGUNTA
   {
     question: "Quantos quilómetros, em média, percorrem os candidatos ao Curso de Ranger durante o treino físico de resistência?",
     options: ["50 km", "70 km", "90 km", "110 km"],
     correctAnswer: "110 km",
     image: "../assets/imgs/17.png"
-  },
-  {
-    question: "Que nome é dado ao exercício final do Curso de Ranger, que testa todas as competências aprendidas?",
-    options: [
-      "Missão Fantasma",
-      "Operação Última Prova",
-      "Sobrevivência Extrema",
-      "Exercício Camaleão"
-    ],
-    correctAnswer: "Exercício Camaleão",
-    image: "../assets/imgs/18.png"
-  },
+  }, // remover pergunta
   {
     question: "Qual destes países já recebeu colaboração direta do CTOE em operações militares?",
     options: ["Afeganistão", "Moçambique", "Timor-Leste", "Todos os anteriores"],
@@ -188,33 +169,29 @@ const veryHardQuestions = [
   }
 ];
 
-const totalQuestions = easyQuestions.length + mediumQuestions.length + hardQuestions.length + veryHardQuestions.length;
+// Define a quantidade de questões para cada setor
+let totalQuestions = sectorOneQuestions.length + sectorTwoQuestions.length + sectorThreeQuestions.length + sectorFourQuestions.length + sectorFiveQuestions.length + sectorSixQuestions.length;
 
-// Atualiza a barra de progresso com base no índice da pergunta atual
+// Função para atualizar a barra de progresso
 function updateProgressBar(currentQuestionIndex) {
-  const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;  // Calcula a porcentagem
-  document.getElementById("progress-bar").style.width = `${progress}%`;  // Atualiza a largura da barra
+  const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100; // Calcula a porcentagem
+  document.getElementById("progress-bar").style.width = `${progress}%`; // Atualiza a barra de progresso
 }
 
-// Função para avançar para a próxima pergunta (exemplo)
-let currentQuestionIndex = 0;
-function nextQuestion() {
-  currentQuestionIndex++;  // Aumenta o índice da pergunta
-  updateProgressBar(currentQuestionIndex);  // Atualiza a barra de progresso
-  // Carregar próxima pergunta aqui (lógica de exibição de pergunta)
-}
-
+// Junta as questões de todos os setores, embaralhando as questões dentro de cada setor
 let questions = [
-  ...shuffleArray(easyQuestions),
-  ...shuffleArray(mediumQuestions),
-  ...shuffleArray(hardQuestions),
-  ...shuffleArray(veryHardQuestions)
+  ...shuffleArray(sectorOneQuestions),
+  ...shuffleArray(sectorTwoQuestions),
+  ...shuffleArray(sectorThreeQuestions),
+  ...shuffleArray(sectorFourQuestions),
+  ...shuffleArray(sectorFiveQuestions),
+  ...shuffleArray(sectorSixQuestions)
 ];
 
 let currentQuestion = 0;
 let score = 0;
 let hints = 3;
-const sectorSize = 5;
+const sectorSize = 3;
 let hintUsedOnCurrentQuestion = false;
 
 function shuffleArray(array) {
@@ -260,19 +237,92 @@ function displayQuestion() {
   updateHintButton();
 }
 
+// Referências aos elementos do mapa
+const mapBtn = document.getElementById('map-btn');
+const mapContainer = document.getElementById('map-container');
+const closeMap = document.getElementById('close-map');
+const mapImage = document.getElementById('map-image');
+
+// Função para abrir o mapa
+mapBtn.addEventListener('click', () => {
+  mapContainer.style.display = 'block';
+});
+
+// Função para fechar o mapa
+closeMap.addEventListener('click', () => {
+  mapContainer.style.display = 'none';
+});
+
+// Atualizar o mapa a cada 3 perguntas
+function updateMapImage() {
+  if (score % 3 === 0) {
+    if (score === 3) {
+      mapImage.src = "../assets/imgs/map2.png";
+    } else if (score === 6) {
+      mapImage.src = "../assets/imgs/map3.png";
+    } else if (score === 9) {
+      mapImage.src = "../assets/imgs/map4.png";
+    } else if (score === 12) {
+      mapImage.src = "../assets/imgs/map5.png";
+    } else if (score === 15) {
+      mapImage.src = "../assets/imgs/map6.png";
+    }
+    
+  }
+}
+
 function checkAnswer(selectedAnswer) {
   const correct = selectedAnswer === questions[currentQuestion].correctAnswer;
-  if (correct) score++;
+  if (correct) {
+    score++;
+  }
 
+  console.log("Selected Answer:", selectedAnswer);
+  console.log("Correct Answer:", questions[currentQuestion].correctAnswer);
+
+  // document.getElementById('score-display-text').textContent = score;
+
+  updateMapImage();
+
+  // Atualiza a imagem do header se a pontuação for múltipla de 3
+  if (score % 3 === 0) {
+    updateHeaderImage();
+  }
+
+  // Aumenta as dicas a cada setor completado
   if ((currentQuestion + 1) % sectorSize === 0) {
     hints++;
   }
 
+  // Avança para a próxima pergunta
   currentQuestion++;
-  displayQuestion();
+  updateProgressBar(currentQuestion);
+
+  if (currentQuestion >= questions.length) {
+    showFinalScore();
+  } else {
+    displayQuestion();
+  }
+}
+
+function updateHeaderImage() {
+  const headerImage = document.getElementById('header-image');
+
+  if (score === 3) {
+    headerImage.src = "../assets/imgs/insignia2.png";
+  } else if (score === 6) {
+    headerImage.src = "../assets/imgs/insignia3.png";
+  } else if (score === 9) {
+    headerImage.src = "../assets/imgs/insignia4.png";
+  } else if (score === 12) {
+    headerImage.src = "../assets/imgs/insignia5.png";
+  } else if (score === 15) {
+    headerImage.src = "../assets/imgs/insignia6.png";
+  }
 }
 
 function showFinalScore() {
+
   const questionDisplay = document.getElementById('quiz-question');
   const optionsDisplay = document.querySelector('.quiz-options');
   const scoreDisplay = document.getElementById('score-display');
@@ -283,6 +333,11 @@ function showFinalScore() {
 
   scoreDisplay.style.display = "block";
   scoreElement.textContent = `${score} de ${questions.length}`;
+
+  const playerName = prompt("Digite seu nome para salvar o placar:");
+  if (playerName) {
+    saveToLeaderboard(playerName, score, elapsedTime);
+  }
 }
 
 function useHint() {
@@ -305,20 +360,30 @@ function useHint() {
 
   hints--;
   hintUsedOnCurrentQuestion = true;
+
   updateHintButton();
 }
 
 function updateHintButton() {
   const hintButton = document.getElementById('hint-btn');
-  hintButton.textContent = `Hint (${hints})`;
+
+  hintButton.innerHTML = `
+    <img src="../assets/imgs/mascot.png" alt="Avatar de Dicas" style="width: 40px; height: 40px; margin-right: 5px; vertical-align: middle;">
+     (${hints})
+  `;
+
   hintButton.disabled = hints <= 0 || hintUsedOnCurrentQuestion;
 }
 
+function saveToLeaderboard(name, score) {
+  const leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+  leaderboard.push({ name, correctAnswers: score });
+  leaderboard.sort((a, b) => b.correctAnswers - a.correctAnswers);
+  localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+  alert("Placar salvo com sucesso! Confira o placar de líderes.");
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  displayQuestion();
-
-  document.getElementById('hint-btn').addEventListener('click', useHint);
-
   document.getElementById('start-btn').addEventListener('click', () => {
     currentQuestion = 0;
     score = 0;
@@ -333,4 +398,6 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = '../index.html';
     }
   });
+
+  displayQuestion();
 });
