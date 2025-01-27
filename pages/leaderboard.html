@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Líderes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('../assets/imgs/background.JPG');
+            color: #FFC857;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header {
+            width: 100%;
+            background-color: #1A3328;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #FFC857;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        th,
+        td {
+            border: 1px solid #FFC857;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #1A3328;
+            color: #FFC857;
+        }
+
+        td {
+            background-color: #344E41;
+        }
+
+        .form-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input {
+            width: 200px;
+        }
+
+        button {
+            background-color: #FFC857;
+            color: #1A3328;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #E1B347;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html"><img id="nav-image" src="../assets/imgs/Inicio_Mira.png" alt="Mapa Interativo"
+                style="width: 50px; height: 50px; border-radius: 10px;"></a>
+              <a href="about.html"><img id="nav-image" src="../assets/imgs/Sobre_Mira.png" alt="Mapa Interativo"
+                style="width: 50px; height: 50px; border-radius: 10px;"></a>
+              <a href="credits.html"><img id="nav-image" src="../assets/imgs/Creditos_Mira.png" alt="Mapa Interativo"
+                style="width: 50px; height: 50px; border-radius: 10px;"></a>
+              <a href="leaderboard.html"><img id="nav-image" src="../assets/imgs/Placar_Mira.png" alt="Mapa Interativo"
+                style="width: 50px; height: 50px; border-radius: 10px;"></a>
+        </nav>
+    </header>
+    <h1>Placar de Líderes</h1>
+
+    <!-- Tabela de líderes -->
+    <table id="leaderboard">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Acertos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os dados serão preenchidos dinamicamente -->
+        </tbody>
+    </table>
+
+    <!-- Formulário para adicionar novo jogador 
+    <div class="form-container">
+        <h2>Adicionar ao Placar</h2>
+        <input type="text" id="playerName" placeholder="Nome do Jogador" required />
+        <input type="number" id="correctAnswers" placeholder="Acertos" required />
+        <input type="text" id="timeTaken" placeholder="Tempo (ex: 2m30s)" required />
+        <button onclick="addToLeaderboard()">Adicionar</button>
+    </div>
+    -->
+
+    <script>
+        // Função para carregar o placar do LocalStorage
+        function loadLeaderboard() {
+            const leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+            const tbody = document.querySelector("#leaderboard tbody");
+            tbody.innerHTML = ""; // Limpa a tabela antes de preencher
+
+            leaderboard.forEach((player) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+          <td>${player.name}</td>
+          <td>${player.correctAnswers}</td>
+        `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Função para adicionar um jogador ao placar
+        function addToLeaderboard() {
+            const name = document.getElementById("playerName").value.trim();
+            const correctAnswers = parseInt(document.getElementById("correctAnswers").value.trim());
+            const time = document.getElementById("timeTaken").value.trim();
+
+            if (!name || isNaN(correctAnswers) || !time) {
+                alert("Por favor, preencha todos os campos corretamente.");
+                return;
+            }
+
+            const newPlayer = { name, correctAnswers, time };
+            const leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+
+            // Adiciona o jogador e ordena por número de acertos (decrescente) e tempo (crescente)
+            leaderboard.push(newPlayer);
+            leaderboard.sort((a, b) => b.correctAnswers - a.correctAnswers || a.time.localeCompare(b.time));
+
+            localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+            loadLeaderboard();
+
+            // Limpa os campos do formulário
+            document.getElementById("playerName").value = "";
+            document.getElementById("correctAnswers").value = "";
+            document.getElementById("timeTaken").value = "";
+        }
+
+        // Carrega o placar ao abrir a página
+        loadLeaderboard();
+    </script>
+</body>
+
+</html>

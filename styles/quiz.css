@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #003430;
 }
 
 h1, p {
@@ -10,20 +10,47 @@ h1, p {
 }
 
 .quiz-header {
-    background-color: #107710;
+    background-image: url('../assets/imgs/Barra_Fundo.png');
+    max-width: 400px;
+    margin: 0px auto 40px auto;
     color: white;
-    text-align: center;
-    padding: 10px;
+    padding: 25px 10px;
+}
+
+.header-content {
+    margin: 0px 5%;
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Alinha o título à esquerda e a barra à direita */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .quiz-header h1 {
     font-size: 20px;
+    margin: 0; 
 }
+
+#progress-bar-container {
+    width: 40%;
+    height: 20px;
+    background-color: #94a66f;
+    border-radius: 10px;
+    margin: 0 ;
+    float: right;
+    overflow: hidden;
+  }
+  
+  #progress-bar {
+    width: 0%; /* Início vazio */
+    height: 100%;
+    background-color: #f9f175;
+    border-radius: 10px 0 0 10px; /* Mantém as bordas arredondadas */
+    transition: width 0.5s ease-in-out;
+  }
 
 .quiz-container {
     max-width: 400px;
-    margin: 20px auto;
-    background-color: white;
+    margin: 20px 5%;
+    background-color: #f9f175;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -35,7 +62,7 @@ h1, p {
     color: white;
     font-weight: bold;
     font-size: 18px;
-    height: 120px;
+    height: 190px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,8 +79,8 @@ h1, p {
 }
 
 .quiz-question {
-    background-color: #f0f0f0;
-    color: #2c3e50;
+    background-color: #94a66f;
+    color: #fff370;
     font-size: 18px;
     font-weight: bold;
     padding: 10px;
@@ -68,7 +95,7 @@ h1, p {
 }
 
 .quiz-option {
-    background-color: #107710;
+    background-color: #4a7643;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -84,7 +111,7 @@ h1, p {
 }
 
 .quiz-option:hover {
-    background-color: #10BB10;
+    background-color: #94a66f;
 }
 
 .option-letter {
@@ -101,6 +128,8 @@ h1, p {
 }
 
 .quiz-footer {
+    max-width: 400px;
+    margin: 20px 5%;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -121,3 +150,21 @@ h1, p {
 .footer-btn:hover {
     background-color: #10BB10;
 }
+
+#mascot {
+    max-width: 150px;
+    max-height: 70px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #map-container {
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow: hidden;
+  }
+  
+  #close-map {
+    color: #555;
+  }
